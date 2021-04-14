@@ -30,5 +30,7 @@ Ejecutar el siguiente comando:
 
 Ejecutar el siguiente comando:
 
-`docker rm grupo1`
-`docker rmi grupo1docker-img`
+```
+docker rm grupo1
+docker rmi grupo1docker-img
+```
