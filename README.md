@@ -1,20 +1,34 @@
-# grupo1-dipdevops-docker
+# Grupo1 Diplomado DevOps Docker
 
-GitHub
+### GitHub
 
-- Clonar el repositorio
+- Clonar el repositorio (Consola o Visual Studio Code)
 
-Consola o Visual Studio Code
+### Construir imagen
 
-- Construir imagen
+Ejecutar en el directorio del repositorio clonado:
 
-    docker build --pull --rm -f "Dockerfile" -t grupo1dockers "."
+`docker build --pull --rm -f "Dockerfile" -t grupo1docker-img .`
 
-- Ejecutar imagen
+### Ejecutar imagen
 
-    docker run --rm -d  -p 8081:8081/tcp grupo1dockers:latest
+Ejecutar el siguiente comando:
 
-Abrir navegador e ir a la siguiente URL
+`docker run --name grupo1 -d --rm -p 8081:8081/tcp grupo1docker-img:latest`
 
-    http://localhost:8081/rest/mscovid/test?msg=testing
+Abrir navegador e ir a la siguiente URL:
 
+`http://localhost:8081/rest/mscovid/test?msg=testing`
+
+### Detener contenedor
+
+Ejecutar el siguiente comando:
+
+`docker stop grupo1`
+
+### Eliminar contenedor e imagen
+
+Ejecutar el siguiente comando:
+
+`docker rm grupo1`
+`docker rmi grupo1docker-img`
